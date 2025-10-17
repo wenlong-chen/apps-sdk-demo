@@ -1,0 +1,25 @@
+{
+  "name": "mcp-cloudflare-demo",
+  "private": true,
+  "workspaces": [
+    "server"
+  ],
+  "scripts": {
+    "build:widgets": "tsx tooling/build.ts",
+    "build:embed": "tsx tooling/embed-widgets.ts",
+    "build": "pnpm build:widgets && pnpm build:embed && pnpm --filter ./server build",
+    "deploy": "pnpm --filter ./server deploy",
+    "clean": "rimraf \"widgets/**/dist\" server/dist server/src/widgets.gen.json"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "esbuild": "^0.24.0",
+    "fast-glob": "^3.3.2",
+    "rimraf": "^6.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
