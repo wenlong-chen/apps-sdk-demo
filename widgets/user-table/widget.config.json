@@ -1,0 +1,8 @@
+{
+  "name": "user-table",
+  "description": "User list display widget",
+  "csp": {
+    "resource_domains": [],
+    "connect_domains": []
+  }
+}
